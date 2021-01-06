@@ -1,0 +1,400 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+font-family: 'Almarai', sans-serif;
+}
+
+.container
+{
+width: 90%;
+margin: auto;
+}
+
+
+
+/*Start Navbar */
+{
+padding: .3rem 1rem;
+}
+
+.upper-bar
+{
+background-color: #095555;
+color: #fff;
+}
+.navbar-nav .nav-item .nav-link
+{
+padding-left: 16px;
+padding-right: 16px;
+font-size: 18px;
+color: #fff;
+font-weight: 300;
+transition: 0.5s;
+}
+
+.navbar .navbar-brand
+{
+font-weight: bold;
+font-size: 26px;
+}
+
+.navbar-nav .nav-item .nav-link:hover
+{
+color: #bbb;
+}
+
+.navbar-nav
+{
+direction: ltr;
+}
+
+/*End Navbar */
+
+
+
+/*Start Carousel*/
+
+.carousel-inner .carousel-item
+{
+overflow: hidden;
+}
+
+.carousel-inner .test1
+{
+background-image: url(../image/mm.jpeg);
+background-size: 100% 100%;
+height: 100%;
+}
+
+.carousel-inner .test2
+{
+background-image: url(../image/mm2.jpeg);
+background-size: 100% 100%;
+height: 100%;
+}
+
+.carousel-inner .test3
+{
+background-image: url(../image/mm3.jpeg);
+background-size: 100% 100%;
+height: 100%;
+}
+
+.carousel-inner .carousel-item .alpha
+{
+background-color: rgba(0,0,0,0.5);
+height: 100%;
+}
+
+.carousel-inner .carousel-item .alpha .paragraph a
+{
+padding: 15px 55px;
+text-decoration: none;
+border: none;
+font-size: 1.4em;
+color: #fff;
+margin-right: 5px;
+outline: none;
+border-radius: 2px;
+}
+
+.carousel-inner .carousel-item .alpha
+{
+display: flex;
+align-items: center;
+}
+
+.carousel-inner .carousel-item .alpha .paragraph
+{
+text-align: center;
+padding: 25px;
+margin: auto;
+}
+
+.carousel-inner .carousel-item .alpha .paragraph h1
+{
+padding-bottom: 10px;
+font-size: 32px;
+text-transform: capitalize;
+color: #fff;
+}
+
+.carousel-inner .carousel-item .alpha .paragraph .sell
+{
+background-color: #095555;
+transition: 0.5s;
+}
+
+.carousel-inner .carousel-item .alpha .paragraph .buy
+{
+background-color: #015698;
+transition: 0.5s;
+}
+
+.carousel-inner .carousel-item .alpha .paragraph .sell:hover
+{
+background-color: #015698;
+}
+
+.carousel-inner .carousel-item .alpha .paragraph .buy:hover
+{
+background-color: #095555;
+}
+
+.carousel-inner .carousel-item .alpha .paragraph p
+{
+padding-bottom: 12px;
+font-size: 1.4em;
+line-height: 1.7em;
+color: #fff;
+}
+
+
+
+/*Start The Buy  And Sales Form*/
+
+.form
+{
+direction: rtl;
+text-align: right;
+background-color: #fff;
+}
+
+.form input
+{
+margin-top: 14px;
+margin-bottom: 5px;
+padding: 9px 10px;
+font-size: 1.07em;
+border: 1px solid #aaa;
+border-radius: 3px;
+outline: none
+}
+
+.form span
+{
+padding-right: 2px;
+color: #666;
+font-size: 1.2em;
+font-weight: bold;
+}
+
+.form label
+{
+color: #333;
+padding-right: 8px;
+font-size: 1.05em;
+}
+
+.form input[type="text"]
+{
+width: 100%;
+}
+
+.form input[type="tel"]
+{
+width: 100%;
+}
+
+.form input[type="file"]
+{
+width: 100%;
+color: #fff;
+}
+
+.form input[type="password"]
+{
+width: 100%;
+}
+
+.form input::placeholder
+{
+color: #888;
+}
+
+
+/*End The Buy  And Sales Form*/
+
+
+
+
+
+
+
+
+
+
+
+/*-------- Preloader --------*/
+.preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999 !important;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.preloader .lds-ellipsis {
+  display: inline-block;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  margin-top: -40px;
+  margin-left: -40px;
+  top: 50%;
+  left: 50%;
+}
+.preloader .lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #000;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.preloader .lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.preloader .lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.preloader .lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.preloader .lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+/*--- Preloader Magnific Popup ----*/
+
+
+
+/*-------- Preloader2 --------*/
+.preloader2 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999999999 !important;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*--- Preloader2 Magnific Popup ----*/
+
+
+/*Start Media The Register Form*/
+@media(max-width: 500px){
+.carousel-inner .carousel-item .alpha .paragraph p{font-size: 14px}
+	.carousel-inner .carousel-item .alpha .paragraph h1{font-size: 24px}
+	.carousel-inner .carousel-item .alpha .paragraph a{font-size: 1.2em}
+
+	.carousel-inner .test1
+{
+background-image: url(../image/mm.jpeg);
+background-size: 100% 100%;
+;background-repeat: no-repeat;
+height: 100%;
+}
+
+.carousel-inner .test2
+{
+background-image: url(../image/mm2.jpeg);
+background-size: 100% 100%;
+background-repeat: no-repeat;
+	
+height: 100%;
+
+}
+
+.carousel-inner .test3
+{
+background-image: url(../image/mm3.jpeg);
+background-size: 100% 100%;
+background-repeat: no-repeat;	
+height: 100%;
+}
+	
+}
+@media(max-width: 800px){
+	
+input[type="text"]
+{
+ width: 100%;margin-right: 0;
+}	
+		
+input[type="tel"]
+{
+width: 100%;margin-right: 0;
+}	
+	
+input[type="password"]
+{
+width: 100%;margin-right: 0;
+}	
+	
+input[type="file"]
+{
+width: 100%;margin-right: 0
+}
+	
+.navbar-nav .nav-item .nav-link
+{
+padding-left: 0px;
+}
+	
+.form
+{
+background-color: #fff;
+}
+.form
+{
+direction: rtl;
+text-align: right;
+background-color: #fff;
+}
+
+	
+	
+}	
+	
+/*End Media The Register Form*/
+	
+	
+	
+	
