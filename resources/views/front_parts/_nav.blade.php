@@ -29,7 +29,7 @@
                     <a class="nav-link icon4" href="{{route('call_us')}}">اتصل بنا</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link icon2" href="#">حول الموقع</a>
+                    <a class="nav-link icon2" href="{{route('about')}}">حول الموقع</a>
                 </li>
 
                 <li class="nav-item main">

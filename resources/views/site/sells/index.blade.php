@@ -1,5 +1,182 @@
 @extends('layouts.site')
 
+@push('style')
+    <style>
+
+        /*Start Navbar */
+        nav
+        {
+            margin-bottom: 30px
+        }
+
+        .navbar-light .navbar-brand
+        {
+            color: #fff;
+            font-size: 26px
+        }
+
+        .navbar-nav .nav-item .nav-link
+        {
+            color: #fff
+        }
+        /*End Navbar*/
+
+
+        /*Start The Sales Form*/
+        .form3
+        {
+            direction: rtl;
+            text-align: right;
+            background-color: #fff;
+            height: auto
+        }
+
+        .form3 input
+        {
+            margin-top: 20px;
+            padding: 9px 10px;
+            font-size: 1.1em;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            outline: none
+        }
+
+        .form3 input
+        {
+            width: 100%
+        }
+
+        .form3 input::placeholder
+        {
+            color: #888
+        }
+        /*End The Sales Form*/
+
+
+        /*Start The Sales Table*/
+        table
+        {
+            height: auto;
+            font-size: 16px;
+            width: 100%
+        }
+
+        table tr
+        {
+            border-top: 1px solid #555;
+            border-bottom: 1px solid #555
+        }
+
+        table tr td
+        {
+            padding: 12px 5px;
+            border: 1px solid #ccc;
+            height: auto;
+            width: 10.4%;
+            text-align: right
+        }
+
+        table tr th
+        {
+            padding: 12px 0px;
+            font-weight: 300;
+            border: 1px solid #ccc;
+            height: auto;
+            width: 10.4%;
+            text-align: center;
+            background-color: #094555 !important;
+            color: #fff;
+            border-top: none;
+            border-bottom: none
+        }
+
+        table tr td:nth-of-type(1)
+        {
+            width: 17%;
+        }
+
+        table tr td:nth-of-type(2)
+        {
+            width: 17%;
+        }
+
+        table tr th:nth-of-type(1)
+        {
+            width: 17%;
+        }
+
+        table tr th:nth-of-type(2)
+        {
+            width: 17%;
+        }
+
+        table tr td:nth-of-type(4)
+        {
+            width: 7%;
+        }
+
+        table tr td:nth-of-type(5)
+        {
+            width: 7%;
+        }
+
+        table tr th:nth-of-type(4)
+        {
+            width: 7%;
+        }
+
+        table tr th:nth-of-type(5)
+        {
+            width: 7%;
+        }
+
+        table tr td:last-child
+        {
+            text-align: center;
+        }
+
+        table tr td button
+        {
+            width: 80%;
+            border: 1px solid #777;
+            padding: 5px 0px;
+            background: none;
+            border-radius: 3px;
+        }
+
+        table tr th button
+        {
+            width: 80%;
+            border: 1px solid #ccc;
+            color: #fff;
+            background: none;
+            padding: 5px 0px;
+            border-radius: 3px;
+
+        }
+
+
+        @media(max-width: 1100px)
+        {
+            table
+            {height: auto;font-size: 14px}
+        }
+
+        @media(max-width: 830px)
+        {
+            table{height: auto;font-size: 12px}
+        }
+
+        @media(max-width: 600px)
+        {
+            table{height: auto;font-size: 9.5px}
+        }
+
+        /*End  The Sales Table*/
+
+    </style>
+
+@endpush
 
 @section('content')
 
@@ -78,12 +255,10 @@
             <h2 class="text-danger"> <strong> {{Session::get('error')}} </strong>  </h2>
         </div>
     @endif
-{{--    <h3 style="direction: rtl;text-align: center;padding-bottom: 20px;font-weight: 500;color: black;font-size: 24px">تعديل <span style="color: #888">/</span> حذف المنتجات المتاحة</h3>--}}
 
-<div class="container">
+    <h3 style="direction: rtl;text-align: center;padding-bottom: 20px;font-weight: 500;color: black;font-size: 24px">تعديل <span style="color: #888">/</span> حذف المنتجات المتاحة</h3>
 
-    <table class="table table-hover my-5" style="direction: rtl;border-right: none;border-left: none" >
-
+    <table style="width: 100%;direction: rtl;border-right: none;border-left: none">
         <tr>
 
             <th>المنتج</th>
@@ -121,7 +296,7 @@
     <div class="justify-content-center d-flex ">
         {{$sells->appends(request()->query())->links()}}
     </div>
-</div>
+
 
 
 

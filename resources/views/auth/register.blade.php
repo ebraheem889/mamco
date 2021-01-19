@@ -128,12 +128,13 @@
                             </div>
                         </div>
 
+
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="approved_policy" id="approved_policy" {{ old('approved_policy') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label  @error('approved_policy') is-invalid @enderror" for="approved_policy">
+                                    <label id="approved_policy" class="form-check-label  @error('approved_policy') is-invalid @enderror" for="approved_policy">
                                         {{ __('site.approved_policy') }}
                                     </label>
                                     @error('approved_policy')
@@ -158,4 +159,43 @@
         </div>
     </div>
 </div>
+
+
+<div class="modal" id="User_notification" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <h5 class="modal-title">@lang('site.welcome')</h5>
+            </div>
+            <div class="modal-body justify-content-center text text-danger" style="direction: rtl">
+
+                  <h5 class="text-center">الموافقة على شروط واحكام الاستخدام:</h5>
+                <h6 style="line-height: 4vh"> 1- عند تصفح الموقع أو القيام باي نشاط عليه ستكون هذه موافقة رسمية/ قانونية منك على شروط واحكام موقع vstore-eg.com</h6>
+                <h6 style="line-height: 4vh">2- إذا كنت غير موافق على شروط واحكام صفحتنا فنرجوا عدم استخدام الموقع وإدارة الموقع تحتفظ بحق تغير أي من هذه الأحكام و الشروط في أي وقت بدون شرط اعلام المستخدم أولا.</h6>
+                <h5 class="text-center"> تفاصيل و أمان الحساب الخاص بك:</h5>
+                <h6 style="line-height: 4vh">1- قبل استخدام موقع vstore-eg.com يجب ان تقوم بالتسجيل وانشاء حساب خاص عن طريق إدخال معلومات شخصية مثل اسم الشركة ورقم السجل التجاري وعنوان البريد الالكتروني , رقم الهاتف , العنوان و كلمة السر للحساب  الخ... 
+                </h6>
+                <h6 style="line-height: 4vh">2- يجب ان تقوم بإدخال معلومات صحيحة, حديثة وكاملة عن الشركة كما هو مطلوب في صفحة التسجيل وفي حالة تغير أي من هذه المعلومات يجب تحديثها على الموقع. </h6>
+                <h6 style="line-height: 4vh">3- في حالة ادخال معلومات غير صحيحة أو غير واضحة ,فادارة الموقع لها الحق في تعليق الخدمة و رفض الشخص كمستخدم في المستقبل.</h6>
+                <h6 style="line-height: 4vh"> 4- مستخدم الموقع مسئول عن الحفاظ على كلمة السر و الحساب الشخصي و يجب على المستخدم إبلاغنا في حالة الشك إنه تم استخدام حسابه الشخصي بدون علمه عن طريق اختراق كلمة السر.</h6>
+                <h5 class="text-center">عند القيام باستخدام الموقع, تكون موافق على الآتي :</h5>
+                <h6 style="line-height: 4vh"> 1- لن تقوم بارسال أي شيء يكون محتوياته غير مناسبة , يعبر عن تفرقة عنصرية, يشمل الفاظ خارجة أو يحتوي على ايحاءات جنسية.</h6>
+                <h6 style="line-height: 4vh"> 2-  لن تقوم بارسال أي شيء ينتهك القوانين المصرية
+                    أو الإعلان عن مواد أو أي شيء محظور الاستخدام أو ينتهك القوانين المصرية</h6>
+                <h6 style="line-height: 4vh">3-  يجب ان تكون على علم ان عند القيام بطلبية يجب ان تكون مستعد لاستلامها و دفع المستحق. </h6>
+                <h5 class="text-center"> تعريف مسئولية موقع vstore-eg.com :</h5>
+                <h6 style="line-height: 4vh">1- يتيح للمستخدم المسجل اضافة (منتجات - خدمات) بصفحة البيع ليتمكن المستخدمين الآخرين المسجلين على الموقع من مشاهدتها في صفحة الشراء والتواصل مع المستخدم إن أرادوا.  </h6>
+                <h6 style="line-height: 4vh">2- هذه الخدمة متاحة من خلال الهاتف والحواسيب. </h6>
+                <h6 style="line-height: 4vh">3- الموقع لا يتدخل في العمليات التالية ( التوريد  ,  التصنيع , التوصيل أو حساب المبلغ المستحق)</h6>
+                <h6 style="line-height: 4vh">4- نحن فقط نعمل كرابط بين الشركات (المستخدمين) و لا نتحمل أي مسئولية لأي نوع من الأضرار. </h6>
+                <h5 class="text-center">توقف أو تغير الخدمة المقدمة:</h5>
+                <h6 style="line-height: 4vh">الموقع يحتفظ بحق تغير أو تعليق أو وقف الخدمة تماما المتاحة من خلال الموقع وهذا يشمل التصفح أو التعامل مع أي من محتويات الموقع .</h6>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" style="width: 12%" id="hide_notification" class="btn btn-outline-danger btn-sm" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 @endsection

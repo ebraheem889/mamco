@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/','MasterController@index')->name('index');
 Route::get('/call_us','MasterController@call')->name('call_us');
+Route::get('/about_us','MasterController@about')->name('about');
 //end of welcome routes
 
 

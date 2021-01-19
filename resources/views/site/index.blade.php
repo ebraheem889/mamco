@@ -2,19 +2,16 @@
 
 
 @section('content')
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner" >
-{{--                <div class="alert alert-warning alert-dismissible fade show justify-content-center container" id="User_notification" role="alert">--}}
-{{--                    <strong>Ops!</strong>Sorry Your Are Not Approved Yet Please Wait Until The Admin Approve you--}}
-{{--                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>--}}
-{{--                </div>--}}
+
 
             @for($i=0 ; $i<3 ;$i++)
-                <div class="carousel-item {{ $i == 0 ? 'active': ' ' }} test{{$i+1}}">
+                <div class="carousel-item  {{ $i == 0 ? 'active': ' ' }} test{{$i+1}}">
                     <div class="alpha">
                         <div class="paragraph">
-                            <h1>this is heading</h1>
-                            <p> يسرنا أن نقدم لكم مامكو كواحدة من الرواد في مجال أعمال أنظمة تشطيبات</p>
+                            <h1>vstore-eg</h1>
+                            <p> اهلا بكم نحن موقع متخصص في تقديم خدمات للقطاع الصناعي في مصر </p>
                             @if (auth()->user())
                                 @if( auth()->user()->status == 1)
                                     <a class="btn btn-info btn-block  "   href="{{route('buy.index')}}">شراء</a>
@@ -59,7 +56,7 @@
 
                   @else
                     @lang('site.islogin_message')
-                    
+
                    @endif
                 </div>
                 <div class="modal-footer justify-content-center">

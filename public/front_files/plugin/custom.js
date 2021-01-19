@@ -50,4 +50,25 @@ $(document).ready(function () {
 
     });
 
+
+    $('#approved_policy').on('click' ,function () {
+
+            $("#User_notification").modal({
+
+                backdrop:'static',
+                keyboard:false,
+            });
+            $('#hide_notification').on('click',function () {
+
+                $('#User_notification .modal-backdrop').remove();
+                $('#User_notification').modal('hide');
+
+            })
+
+
+
+
+    });
+
+
 })

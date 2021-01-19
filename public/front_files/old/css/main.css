@@ -2,9 +2,8 @@
 margin: 0px;
 padding: 0px;
 box-sizing: border-box;
-font-family: 'Cairo', sans-serif;
+font-family: 'Almarai', sans-serif;
 }
-
 
 .container
 {
@@ -12,7 +11,7 @@ width: 90%;
 margin: auto;
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link{color: red}
+
 
 /*Start Navbar */
 {
@@ -90,7 +89,7 @@ height: 100%;
 
 .carousel-inner .carousel-item .alpha .paragraph a
 {
-padding: 9px 60px;
+padding: 15px 55px;
 text-decoration: none;
 border: none;
 font-size: 1.4em;
@@ -98,7 +97,6 @@ color: #fff;
 margin-right: 5px;
 outline: none;
 border-radius: 2px;
-
 }
 
 .carousel-inner .carousel-item .alpha
@@ -117,15 +115,14 @@ margin: auto;
 .carousel-inner .carousel-item .alpha .paragraph h1
 {
 padding-bottom: 10px;
-font-size: 34px;
+font-size: 32px;
 text-transform: capitalize;
 color: #fff;
-font-weight: 400
 }
 
 .carousel-inner .carousel-item .alpha .paragraph .sell
 {
-background-color: #094555;
+background-color: #095555;
 transition: 0.5s;
 }
 
@@ -355,8 +352,6 @@ height: 100%;
 	
 }
 @media(max-width: 800px){
-
-	.navbar-nav{flex-direction: column-reverse}
 	
 input[type="text"]
 {

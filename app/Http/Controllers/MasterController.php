@@ -25,6 +25,12 @@ class MasterController extends Controller
     }
 
 
+    public function about(){
+
+        return view('site.about');
+
+    }
+
     public function pending(){
 
 

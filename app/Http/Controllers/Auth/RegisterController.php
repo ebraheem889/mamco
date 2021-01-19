@@ -51,7 +51,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'company_name' => ['required', 'string','max:100','regex:/\p{Arabic}/u'],
-            'company_name_en' => ['required', 'string', 'regex:/(^([a-zA-Z]+)(\d+)?$)/u', 'max:100'],
+            'company_name_en' => ['required', 'string', 'regex:/(^([a-zA-Z0-9_ ]*$)(\d+)?$)/u', 'max:100'],
             'commercial_number' => ['required', 'numeric','digits_between:9,20'],
             'address' => ['required', 'string','max:100'],
             'telephone' => ['required', 'numeric','digits_between:11,16'],
